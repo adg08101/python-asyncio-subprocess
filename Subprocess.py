@@ -2,7 +2,8 @@ import asyncio
 import multiprocessing
 
 async def run(cmd):
-    proc = await asyncio.create_subprocess_shell(
+    # proc = await asyncio.create_subprocess_shell(
+    proc = await asyncio.create_subprocess_exec(
         cmd,
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE)
